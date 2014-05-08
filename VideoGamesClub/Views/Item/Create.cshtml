@@ -1,4 +1,4 @@
-﻿@model VideoGamesClub.Models.UserProfile
+﻿@model VideoGamesClub.Models.Game
 
 @{
     ViewBag.Title = "Create";
@@ -11,14 +11,14 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>UserProfile</legend>
+        <legend>Game</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.UserName)
+            @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.UserName)
-            @Html.ValidationMessageFor(model => model.UserName)
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
 
         <p>

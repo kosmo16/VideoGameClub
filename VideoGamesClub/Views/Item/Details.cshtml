@@ -1,4 +1,4 @@
-﻿@model VideoGamesClub.Models.UserProfile
+﻿@model VideoGamesClub.Models.Game
 
 @{
     ViewBag.Title = "Details";
@@ -7,16 +7,16 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>UserProfile</legend>
+    <legend>Game</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.UserName)
+         @Html.DisplayNameFor(model => model.Name)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.UserName)
+        @Html.DisplayFor(model => model.Name)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.UserId }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -11,16 +11,14 @@ namespace VideoGamesClub.Controllers
 {
     public class ItemController : Controller
     {
-        private UsersContext db = new UsersContext(); // kontekst do bazy
-        private List<int> ItemList = new List<int>(); // lista uzyskana z bazy
+        private VideoGamesClubDb db = new VideoGamesClubDb(); // kontekst do bazy
+
         //
         // GET: /Item/
 
         public ActionResult Index()
         {
-            for(int i=0;i<10;i++)
-                ItemList.Add(i);
-            return View(ItemList); //db.UserProfiles.ToList()
+            return View(db.Games.ToList());
         }
 
         //
@@ -28,12 +26,12 @@ namespace VideoGamesClub.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            UserProfile userprofile = db.UserProfiles.Find(id);
-            if (userprofile == null)
+            Game gm = db.Games.Find(id);
+            if (gm == null)
             {
                 return HttpNotFound();
             }
-            return View(userprofile);
+            return View(gm);
         }
 
         //
@@ -49,16 +47,16 @@ namespace VideoGamesClub.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(UserProfile userprofile)
+        public ActionResult Create(Game gm)
         {
             if (ModelState.IsValid)
             {
-                db.UserProfiles.Add(userprofile);
+                db.Games.Add(gm);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(userprofile);
+            return View(gm);
         }
 
         //
@@ -66,12 +64,12 @@ namespace VideoGamesClub.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            UserProfile userprofile = db.UserProfiles.Find(id);
-            if (userprofile == null)
+            Game gm = db.Games.Find(id);
+            if (gm == null)
             {
                 return HttpNotFound();
             }
-            return View(userprofile);
+            return View(gm);
         }
 
         //
@@ -79,15 +77,15 @@ namespace VideoGamesClub.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(UserProfile userprofile)
+        public ActionResult Edit(Game gm)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(userprofile).State = EntityState.Modified;
+                db.Entry(gm).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(userprofile);
+            return View(gm);
         }
 
         //
@@ -95,12 +93,12 @@ namespace VideoGamesClub.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            UserProfile userprofile = db.UserProfiles.Find(id);
-            if (userprofile == null)
+            Game gm = db.Games.Find(id);
+            if (gm == null)
             {
                 return HttpNotFound();
             }
-            return View(userprofile);
+            return View(gm);
         }
 
         //
@@ -110,8 +108,8 @@ namespace VideoGamesClub.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            UserProfile userprofile = db.UserProfiles.Find(id);
-            db.UserProfiles.Remove(userprofile);
+            Game gm = db.Games.Find(id);
+            db.Games.Remove(gm);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
