@@ -1,29 +1,50 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
+<div class="main-content">
+        
+        <div class="sidebar-left">
+        
+            <h2>Kategorie:</h2>
+            
+            <ul>
+                    <li><a href="">Example</a></li>
+                    <li><a href="">Example</a></li>
+                    <li><a href="">Example</a></li>
+                    <li><a href="">Example</a></li>
+                    <li><a href="">Example</a></li>
+                    <li><a href="">Example</a></li>
+            </ul>
+        
         </div>
-    </section>
-}
-<ol class="round">
-    <li class="one">
-        <h5>1st RULE</h5>
-        You do not talk about VIDEO GAMES CLUB.
-    </li>
+        
+        <div class="sidebar-right">
+         
+            <h2>Gry:</h2>
+            
+                <div class="item">
+            
+                    <!-- Here place appropriate foreach loop in order to display items -->
+                    <!-- This is ONLY sample item which shows the view -->
+                    <!-- Order: Game name, picture, description -->
+                    
+                    <h3>Video game name</h3>
+                    <img src="~/Content/images/test.jpg"/>
+                    <h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"</h4>
+         
+                </div>
+                <div class="item">
+            
+                    <!-- Here place appropriate foreach loop in order to display items -->
+                    <!-- This is ONLY sample item which shows the view -->
+                    <!-- Order: Game name, picture, description -->
+                    
+                    <h3>Video game name</h3>
+                    <img src="~/Content/images/test.jpg"/>
+                    <h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"</h4>
+         
+                </div>
+         
+        </div>
 
-    <li class="two">
-        <h5>2nd RULE</h5>
-        You DO NOT talk about VIDEO GAMES CLUB.
-    </li>
-
-    <li class="three">
-        <h5>3rd RULE</h5>
-        If someone says "stop" or goes limp, taps out the fight is over.
-    </li>
-</ol>
+    </div>

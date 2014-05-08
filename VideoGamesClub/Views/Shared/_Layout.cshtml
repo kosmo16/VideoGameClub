@@ -2,13 +2,72 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>@ViewBag.Title - Video Games Club</title>
+        <link rel="icon" type="image/png" href="~/favicon.png"/>
+          <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700' rel='stylesheet' type='text/css'>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
+    <header>
+        
+        <div class="header-content">
+        
+            <div class="logo">
+                <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/newLogo.png" alt="VideoGamesClub" /></a> 
+            </div>
+            <div class="section-right">
+                
+                <h1>Welcome to Video Games Club</h1>
+                
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Konto", "About", "Home")</li>
+                    <li>@Html.ActionLink("Gry", "Contact", "Home")</li>
+                    <li>Wymiany</li>
+                    <li>Uzytkownicy</li>
+                </ul>
+    
+            </div>
+            
+        </div>
+	
+    </header>
+
+
+    <div id="body">
+    @RenderSection("featured", required: false)
+    <section class="main-content">
+        @RenderBody()
+    </section>
+    </div>
+    <footer>
+        
+        <div class="footer-menu">
+            
+            <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+            </ul>
+            
+        </div>
+        
+    </footer>
+    </body>
+
+@*    <body>
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -48,5 +107,5 @@
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
-    </body>
+    </body>*@
 </html>
