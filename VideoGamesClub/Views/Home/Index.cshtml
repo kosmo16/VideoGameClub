@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<VideoGamesClub.Models.News>
+
+@{
+    ViewBag.Title = "News";
 }
 <div class="main-content">
         
@@ -20,30 +22,38 @@
         
         <div class="sidebar-right">
          
-            <h2>Gry:</h2>
-            
-                <div class="item">
-            
-                    <!-- Here place appropriate foreach loop in order to display items -->
-                    <!-- This is ONLY sample item which shows the view -->
-                    <!-- Order: Game name, picture, description -->
-                    
-                    <h3>Video game name</h3>
-                    <img src="~/Content/images/test.jpg"/>
-                    <h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"</h4>
-         
-                </div>
-                <div class="item">
-            
-                    <!-- Here place appropriate foreach loop in order to display items -->
-                    <!-- This is ONLY sample item which shows the view -->
-                    <!-- Order: Game name, picture, description -->
-                    
-                    <h3>Video game name</h3>
-                    <img src="~/Content/images/test.jpg"/>
-                    <h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"</h4>
-         
-                </div>
+            <h2>Newsy:</h2>
+                
+            <table>
+               
+            @foreach (var item in Model) 
+            {
+                <tr>
+                    <td>
+                      <h3>@Html.DisplayFor(modelItem => item.HeadTitle)</h3>
+                    </td>
+                    <td>
+                       <p> @Html.ActionLink("Expand", "Expand", new { id=item.Id }) </p>
+
+                    </td>
+                </tr>
+                <tr><td>                        
+                        @if(!item.isCollapsed) 
+                        {
+                         <h4>@Html.DisplayFor(modelItem => item.FullText)</h4>
+                         <a href="@Html.DisplayFor(modelItem => item.Source)">Source</a>
+                         <h5>Autor: @Html.DisplayFor(modelItem => item.Author)</h5>
+                        }
+                        @if(item.isCollapsed)
+                        {
+                            <h4>@Html.DisplayFor(modelItem => item.ShortText)</h4>
+                        }
+
+                    </td></tr>
+            }
+
+            </table>
+
          
         </div>
 
