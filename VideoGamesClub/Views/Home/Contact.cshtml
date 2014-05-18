@@ -2,7 +2,15 @@
     ViewBag.Title = "Contact";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+    <div class="main-content">
+        
+        <form enctype="text/plain" method="get" action="mailto:test@gmail.com">
+	    <span>Imię:</span> </br><input type="text" name="first_name"><br>
+	    <span>Nazwisko:</span></br><input type="text" name="last_name"><br>
+	    <span>Email:</span></br><input type="text" name="mail"><br>
+	    <span>Treść wiadomości:</span></br> <textarea style="background: rgb(240, 240, 240); border: none; border-radius: 3px; width: 450px; height: 250px; margin-bottom: 50px; " rows="5" cols="30" name="comments"></textarea></br>
+	<input id="#send" style="width: 180px; background: rgb(220, 220, 220);" type="submit" value="Send">
+	</form>
+	
+
+    </div> 
