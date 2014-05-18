@@ -170,6 +170,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Exchange.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\User.cs" />
@@ -297,7 +299,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
