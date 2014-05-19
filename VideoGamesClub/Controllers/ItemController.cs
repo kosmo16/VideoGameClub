@@ -18,6 +18,7 @@ namespace VideoGamesClub.Controllers
 
         public ActionResult Index()
         {
+            db.News.ToList();
             return View(db.Games.ToList());
         }
 
@@ -51,6 +52,7 @@ namespace VideoGamesClub.Controllers
         {
             if (ModelState.IsValid)
             {
+                gm.IntroduceDate = DateTime.Now;
                 db.Games.Add(gm);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,6 +84,7 @@ namespace VideoGamesClub.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(gm).State = EntityState.Modified;
+                gm.IntroduceDate = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -9,12 +9,58 @@
 <fieldset>
     <legend>Game</legend>
 
-    <div class="display-label">
+    <b> <div class="display-label">
          @Html.DisplayNameFor(model => model.Name)
     </div>
+    </b>
     <div class="display-field">
         @Html.DisplayFor(model => model.Name)
     </div>
+
+    <b>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Id)
+    </div>
+    </b>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Id)
+    </div>
+    
+    <b>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserId)
+    </div>
+    </b>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+    <b>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IntroduceDate)
+    </div>
+    </b>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IntroduceDate)
+    </div>
+    
+    <b>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rating)
+    </div>
+    </b>
+        <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+    <b>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    </b>
+        <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    
+
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
