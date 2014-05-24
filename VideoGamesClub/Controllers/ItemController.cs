@@ -64,6 +64,7 @@ namespace VideoGamesClub.Controllers
         //
         // GET: /Item/Edit/5
 
+        [Authorize(Roles="administrator")]
         public ActionResult Edit(int id = 0)
         {
             Game gm = db.Games.Find(id);
@@ -79,6 +80,7 @@ namespace VideoGamesClub.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrator")]
         public ActionResult Edit(Game gm)
         {
             if (ModelState.IsValid)
@@ -94,6 +96,7 @@ namespace VideoGamesClub.Controllers
         //
         // GET: /Item/Delete/5
 
+        [Authorize(Roles = "administrator")]
         public ActionResult Delete(int id = 0)
         {
             Game gm = db.Games.Find(id);
@@ -109,6 +112,7 @@ namespace VideoGamesClub.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrator")]
         public ActionResult DeleteConfirmed(int id)
         {
             Game gm = db.Games.Find(id);
