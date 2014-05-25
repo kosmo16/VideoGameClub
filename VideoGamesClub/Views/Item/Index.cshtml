@@ -4,28 +4,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
+<div class="main-content">
+	
+	
 
+		<p class="create" style="margin-bottom: 50px;">
+		    @Html.ActionLink("Create New", "Create")
+		</p>
+
+        
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item)
-        </td>
-        <td>
-            @if(User.IsInRole("administrator")) {
+    
+    		<table class="display-games">
+		
+		    <tr>
+			<td>
+			    @Html.DisplayFor(modelItem => item)
+			</td>
+		    </tr>
+		
+		</table>
+		
+		<div class="games-buttons">
+			    @if(User.IsInRole("administrator")) {
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id })
                 @Html.ActionLink("Details", "Details", new { id=item.Id })
                 @Html.ActionLink("Delete", "Delete", new { id=item.Id})
             } else {
                 @Html.ActionLink("Details", "Details", new { id=item.Id })
             }
-        </td>
-    </tr>
-}
+		</div>
+}      
 
-</table>
+</div>
