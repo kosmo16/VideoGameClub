@@ -24,7 +24,6 @@ namespace VideoGamesClub
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/site.css",
                 "~/Content/normlaize.css",
                 "~/Content/main.css"));
 
