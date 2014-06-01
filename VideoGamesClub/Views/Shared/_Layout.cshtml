@@ -37,8 +37,20 @@
                 </ul>
 
              <div class="search-box">
-	
-		        <input type="text" class="search" placeholder="Szukaj..."><input type="submit" class="go" value="Szukaj!"/>
+
+		        
+    @using (@Html.BeginForm("SearchResults", "Home"))
+    {
+       
+
+                    @Html.TextBox("searchtext")
+                 <input type="submit" class="go" value="Szukaj!"/>
+/*
+@Html.RadioButton("criteria", "name", new { id = "nameID", Text="Name", Checked=true, TextAlign="right" })
+        <label for="nameID">Name</label>
+@Html.RadioButton("criteria", "description", new { id = "descID", Text="Description" })
+        <label for="nameID">Description</label>*/
+    } 
 		    
 		    </div>
     

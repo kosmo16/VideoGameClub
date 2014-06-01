@@ -42,5 +42,13 @@ namespace VideoGamesClub.Controllers
             
             return RedirectToAction("Index");
         }
+
+        public ActionResult SearchResults(string searchtext)
+        {
+            List<Game> foundGames = db.Games.ToList();
+            Predicate<Game> gameFinder = (Game g) => { return g.Name.IndexOf(searchtext, StringComparison.CurrentCultureIgnoreCase)!=-1; };
+            foundGames = foundGames.FindAll(gameFinder);
+            return View(foundGames);
+        }
     }
 }
