@@ -38,6 +38,7 @@ namespace VideoGamesClub.Controllers
         //
         // GET: /Item/Create
 
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -48,6 +49,7 @@ namespace VideoGamesClub.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(Game gm)
         {
             if (ModelState.IsValid)

@@ -59,6 +59,13 @@
             <div id="login">
                 @Html.Partial("_LoginPartial")
             </div>
+
+            <div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p>Witaj @User.Identity.Name!</p>
+                }
+            </div>
             
         </div>
 	

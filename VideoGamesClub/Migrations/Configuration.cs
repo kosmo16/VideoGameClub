@@ -38,7 +38,7 @@ namespace VideoGamesClub.Migrations
                 new Game
                 {
                     Name = "Game of Thrones",
-                    Description = "takiej gry jeszcze nie by³o",
+                    Description = "takiej gry jeszcze nie bylo",
                     Rating = 9,
                     UserId = 3,
                     IntroduceDate = new DateTime(2014, 2, 2)
@@ -54,7 +54,7 @@ namespace VideoGamesClub.Migrations
                 new Game
                 {
                     Name = "Titanfall",
-                    Description = " podobno mo¿na przejœæ w 15 minut",
+                    Description = " podobno mozna przejsc w 15 minut",
                     Rating = 3,
                     UserId = 1,
                     IntroduceDate = new DateTime(2014, 4, 4)
@@ -62,10 +62,50 @@ namespace VideoGamesClub.Migrations
                 new Game
                 {
                     Name = "World of Warcraft: Warlords of Draenor",
-                    Description = "trudno opisaæ s³owami",
+                    Description = "trudno opisaæ slowami",
                     Rating = 7,
                     UserId = 7,
                     IntroduceDate = new DateTime(2014, 5, 5)
+                },
+                new Game
+                {
+                    Name = "Half Life",
+                    Description = "",
+                    Rating = 10,
+                    UserId = -1,
+                    IntroduceDate = new DateTime(2014, 6, 2)
+                },
+                new Game
+                {
+                    Name = "Half Life",
+                    Description = "",
+                    Rating = 10,
+                    UserId = -1,
+                    IntroduceDate = new DateTime(2014, 6, 2)
+                },
+                new Game
+                {
+                    Name = "Zerowka",
+                    Description = "Termin zerowy (pon)",
+                    Rating = 5,
+                    UserId = -1,
+                    IntroduceDate = new DateTime(2014, 6, 23, 12, 15, 0)
+                },
+                new Game
+                {
+                    Name = "Egzamin 1",
+                    Description = "Pierwszy termin (wt)",
+                    Rating = 7,
+                    UserId = -1,
+                    IntroduceDate = new DateTime(2014, 7, 1, 9, 15, 0)
+                },
+                new Game
+                {
+                    Name = "Egzamin 2",
+                    Description = "Drugi termin (wt)",
+                    Rating = 9,
+                    UserId = -1,
+                    IntroduceDate = new DateTime(2014, 7, 8, 9, 30, 0)
                 }
             );
         }
