@@ -106,20 +106,21 @@ header .logo img:hover { opacity: 0.8; }
 
 header .section-right { display: inline; float: left; width: 500px; margin-top: 15px; margin-left: 50px; font-family: 'Oleo Script', 'cursive'; color: #fff; }
 
-header .menu { float: left; width: 580px; margin-top: 30px; margin-left: 50px; height: 80px; background: #2C3E50;  border-top-right-radius: 15px; }
+header .menu { float: left; width: 320px; margin-top: 30px; margin-left: 50px; height: 80px; background: #2C3E50;  border-top-right-radius: 15px; }
 header .menu ul { list-style-type:none; margin-top: 29px; }
 header .menu li { display: inline; background: #F39C12; padding: 15px; }
 header .menu li:hover { opacity: 0.7; padding-top:18px; padding-bottom: 18px; }
 header .menu li a { color: white; text-decoration: none; font-weight: bold; }
 
 .login-section { float: left; margin-top: 23px; margin-left: 20px;  }
-.login-section button { display: inline; background: rgb(45, 73, 104); color: white; margin: 5px; width: 100px; height: 40px;  border: none; border-radius: 3px; }
+.login-section button { display: inline; background: rgb(236, 218, 55); color: white; margin: 5px; width: 100px; height: 40px;  border: none; border-radius: 3px; }
 .login-section button:hover { opacity: 0.8; }
 
-.search-box { width: 180px; height: 30px; margin-top: 38px; background: gray; margin-bottom: 10px;}
+
+.search-box { width: 480px; height: 30px; margin-top: 38px; margin-bottom: 10px}
 .search-box .search { width: 280px; background: #fff; border: none; }
-.go { position: absolute; width: 70px; height: 42px; margin-left: 280px; margin-top: -72px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; } 
-.go:hover { background: rgb(180,180,180); }
+.search-box input#searchtext { width: 180px; background: #fff; border: none; }
+.search-box input#searchbutton { display: inline; background: rgb(236, 218, 55); color: white; margin: 5px; width: 100px; height: 40px;  border: none; border-radius: 3px; }
 
 /* Home */
 .main-content { width: 1030px; margin: auto; margin-top: 180px; margin-bottom: 50px; overflow:hidden; }
@@ -162,6 +163,14 @@ span { color: #777; }
 .main-content .create { text-align: center; width: 100px; margin: auto; padding: 10px; border-radius: 3px; background: rgb(98, 183, 97);  }
 .main-content .create a { color: #fff; text-decoration: none; }
 .main-content .create a:hover { text-decoration: underline; }
+
+#reg-title { color: rgb(174, 174, 174); text-align: center;  }
+#register { width: 700px; margin: auto; color: #777;  }
+
+#log-title { color: rgb(174, 174, 174); text-align: center;  }
+#login-set { width: 700px; margin: auto; color: #777;  }
+#ifUdontHaAc a { text-decoration: none; color: rgb(150,150,150); }
+#ifUdontHaAc a:hover { text-decoration: underline; }
 
 .games-buttons { text-align: center !important; }
 .games-buttons a { padding: 10px; color: gray; text-decoration: none; font-weight: bold; }

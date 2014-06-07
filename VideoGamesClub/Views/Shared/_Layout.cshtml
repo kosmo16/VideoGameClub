@@ -32,8 +32,6 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Konto", "About", "Home")</li>
                     <li>@Html.ActionLink("Gry", "Index", "Item")</li>
-                    <li>Wymiany</li>
-                    <li>Uzytkownicy</li>
                 </ul>
 
              <div class="search-box">
@@ -43,8 +41,8 @@
     {
        
 
-                    @Html.TextBox("searchtext")
-                 <input type="submit" class="go" value="Szukaj!"/>
+     @Html.TextBox("searchtext")
+     <input id="searchbutton" type="submit" class="go" value="Szukaj!"/>
 /*
 @Html.RadioButton("criteria", "name", new { id = "nameID", Text="Name", Checked=true, TextAlign="right" })
         <label for="nameID">Name</label>
@@ -56,7 +54,7 @@
     
             </div>
 
-            <div id="login">
+            <div class="login-section">
                 @Html.Partial("_LoginPartial")
             </div>
 

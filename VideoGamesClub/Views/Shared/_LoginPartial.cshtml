@@ -1,4 +1,9 @@
 ﻿
-    <button type="button">@Html.ActionLink("Zaloguj", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</button>
-
-	<button type="button">@Html.ActionLink("Zarejestruj", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</button>
+@using (Html.BeginForm("Login", "Account", FormMethod.Get, new { id = "loginLink" }))
+{
+    <button type="submit">Zaloguj</button>
+}
+@using (Html.BeginForm("Register", "Account", FormMethod.Get, new { id = "registerLink" }))
+{
+    <button type="submit">Zarejestruj</button>
+}
